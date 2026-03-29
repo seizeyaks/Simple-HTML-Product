@@ -1,4 +1,44 @@
 const colorData = {
+  pastel: [
+    { hex: "#FDFCF0", rgb: "rgb(253, 252, 240)" },
+    { hex: "#F0F4EF", rgb: "rgb(240, 244, 239)" },
+    { hex: "#F2E9E4", rgb: "rgb(242, 233, 228)" },
+    { hex: "#D8E2DC", rgb: "rgb(216, 226, 220)" },
+    { hex: "#FFE5D9", rgb: "rgb(255, 229, 217)" },
+    { hex: "#FFCAD4", rgb: "rgb(255, 202, 212)" },
+    { hex: "#F4C2C2", rgb: "rgb(244, 194, 194)" },
+    { hex: "#B9FBC0", rgb: "rgb(185, 251, 192)" },
+    { hex: "#CFBAF0", rgb: "rgb(207, 186, 240)" },
+    { hex: "#A3C4F3", rgb: "rgb(163, 196, 243)" },
+    { hex: "#90DBF4", rgb: "rgb(144, 219, 244)" },
+    { hex: "#8EECF5", rgb: "rgb(142, 236, 245)" },
+    { hex: "#98F5E1", rgb: "rgb(152, 245, 225)" },
+    { hex: "#F1C0E8", rgb: "rgb(241, 192, 232)" },
+    { hex: "#FFFACD", rgb: "rgb(255, 250, 205)" },
+    { hex: "#E6E6FA", rgb: "rgb(230, 230, 250)" },
+    { hex: "#DDA0DD", rgb: "rgb(221, 160, 221)" },
+    { hex: "#AFEEEE", rgb: "rgb(175, 238, 238)" }
+  ],
+  muted: [
+    { hex: "#4A5759", rgb: "rgb(74, 87, 89)" },
+    { hex: "#668586", rgb: "rgb(102, 133, 134)" },
+    { hex: "#91A8A4", rgb: "rgb(145, 168, 164)" },
+    { hex: "#BCCAD6", rgb: "rgb(188, 202, 214)" },
+    { hex: "#8D94BA", rgb: "rgb(141, 148, 186)" },
+    { hex: "#6D6875", rgb: "rgb(109, 104, 117)" },
+    { hex: "#B5838D", rgb: "rgb(181, 131, 141)" },
+    { hex: "#E5989B", rgb: "rgb(229, 152, 155)" },
+    { hex: "#A5A58D", rgb: "rgb(165, 165, 141)" },
+    { hex: "#6B705C", rgb: "rgb(107, 112, 92)" },
+    { hex: "#3D5A80", rgb: "rgb(61, 90, 128)" },
+    { hex: "#98C1D9", rgb: "rgb(152, 193, 217)" },
+    { hex: "#588157", rgb: "rgb(88, 129, 87)" },
+    { hex: "#3A5A40", rgb: "rgb(58, 90, 64)" },
+    { hex: "#2F3E46", rgb: "rgb(47, 62, 70)" },
+    { hex: "#52796F", rgb: "rgb(82, 121, 111)" },
+    { hex: "#354F52", rgb: "rgb(53, 79, 82)" },
+    { hex: "#84A59D", rgb: "rgb(132, 165, 157)" }
+  ],
   red: [
     { name: "IndianRed", hex: "#CD5C5C", rgb: "rgb(205, 92, 92)" },
     { name: "LightCoral", hex: "#F08080", rgb: "rgb(240, 128, 128)" },
@@ -161,22 +201,6 @@ const colorData = {
     { name: "SlateGray", hex: "#708090", rgb: "rgb(112, 128, 144)" },
     { name: "DarkSlateGray", hex: "#2F4F4F", rgb: "rgb(47, 79, 79)" },
     { name: "Black", hex: "#000000", rgb: "rgb(0, 0, 0)" }
-  ],
-  pastel: [
-    { hex: "#F4C2C2", rgb: "rgb(244, 194, 194)" },
-    { hex: "#FFD1DC", rgb: "rgb(255, 209, 220)" },
-    { hex: "#FBCEB1", rgb: "rgb(251, 206, 177)" },
-    { hex: "#FFE5B4", rgb: "rgb(255, 229, 180)" },
-    { hex: "#FFFACD", rgb: "rgb(255, 250, 205)" },
-    { hex: "#FFFDD0", rgb: "rgb(255, 253, 208)" },
-    { hex: "#98FF98", rgb: "rgb(152, 255, 152)" },
-    { hex: "#C1E1C1", rgb: "rgb(193, 225, 193)" },
-    { hex: "#B0E0E6", rgb: "rgb(176, 224, 230)" },
-    { hex: "#89CFF0", rgb: "rgb(137, 207, 240)" },
-    { hex: "#E6E6FA", rgb: "rgb(230, 230, 250)" },
-    { hex: "#CCCCFF", rgb: "rgb(204, 204, 255)" },
-    { hex: "#D8BFD8", rgb: "rgb(216, 191, 216)" },
-    { hex: "#FDBCB4", rgb: "rgb(253, 188, 180)" }
   ]
 };
 
@@ -210,7 +234,6 @@ function renderPalette(category) {
     const item = document.createElement('div');
     item.className = 'color-item';
 
-    // 이름이 있는 경우에만 이름 박스 렌더링
     let nameBox = '';
     if (color.name) {
       nameBox = `<div class="info-box" onclick="copyToClipboard('${color.name}')">${color.name}</div>`;
