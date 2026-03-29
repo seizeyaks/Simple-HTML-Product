@@ -163,20 +163,20 @@ const colorData = {
     { name: "Black", hex: "#000000", rgb: "rgb(0, 0, 0)" }
   ],
   pastel: [
-    { name: "Baby Pink", hex: "#F4C2C2", rgb: "rgb(244, 194, 194)" },
-    { name: "Pastel Pink", hex: "#FFD1DC", rgb: "rgb(255, 209, 220)" },
-    { name: "Apricot", hex: "#FBCEB1", rgb: "rgb(251, 206, 177)" },
-    { name: "Peach", hex: "#FFE5B4", rgb: "rgb(255, 229, 180)" },
-    { name: "Lemon Chiffon", hex: "#FFFACD", rgb: "rgb(255, 250, 205)" },
-    { name: "Cream", hex: "#FFFDD0", rgb: "rgb(255, 253, 208)" },
-    { name: "Mint Green", hex: "#98FF98", rgb: "rgb(152, 255, 152)" },
-    { name: "Pale Mint", hex: "#C1E1C1", rgb: "rgb(193, 225, 193)" },
-    { name: "Powder Blue", hex: "#B0E0E6", rgb: "rgb(176, 224, 230)" },
-    { name: "Baby Blue", hex: "#89CFF0", rgb: "rgb(137, 207, 240)" },
-    { name: "Lavender", hex: "#E6E6FA", rgb: "rgb(230, 230, 250)" },
-    { name: "Periwinkle", hex: "#CCCCFF", rgb: "rgb(204, 204, 255)" },
-    { name: "Thistle", hex: "#D8BFD8", rgb: "rgb(216, 191, 216)" },
-    { name: "Melon", hex: "#FDBCB4", rgb: "rgb(253, 188, 180)" }
+    { hex: "#F4C2C2", rgb: "rgb(244, 194, 194)" },
+    { hex: "#FFD1DC", rgb: "rgb(255, 209, 220)" },
+    { hex: "#FBCEB1", rgb: "rgb(251, 206, 177)" },
+    { hex: "#FFE5B4", rgb: "rgb(255, 229, 180)" },
+    { hex: "#FFFACD", rgb: "rgb(255, 250, 205)" },
+    { hex: "#FFFDD0", rgb: "rgb(255, 253, 208)" },
+    { hex: "#98FF98", rgb: "rgb(152, 255, 152)" },
+    { hex: "#C1E1C1", rgb: "rgb(193, 225, 193)" },
+    { hex: "#B0E0E6", rgb: "rgb(176, 224, 230)" },
+    { hex: "#89CFF0", rgb: "rgb(137, 207, 240)" },
+    { hex: "#E6E6FA", rgb: "rgb(230, 230, 250)" },
+    { hex: "#CCCCFF", rgb: "rgb(204, 204, 255)" },
+    { hex: "#D8BFD8", rgb: "rgb(216, 191, 216)" },
+    { hex: "#FDBCB4", rgb: "rgb(253, 188, 180)" }
   ]
 };
 
@@ -194,7 +194,6 @@ function copyToClipboard(text) {
 }
 
 function renderPalette(category) {
-  // Update active button state
   document.querySelectorAll('.controls button').forEach(btn => {
     btn.classList.remove('active');
     if (btn.innerText.toLowerCase() === category) {
@@ -211,16 +210,16 @@ function renderPalette(category) {
     const item = document.createElement('div');
     item.className = 'color-item';
 
+    // 이름이 있는 경우에만 이름 박스 렌더링
+    let nameBox = '';
+    if (color.name) {
+      nameBox = `<div class="info-box" onclick="copyToClipboard('${color.name}')">${color.name}</div>`;
+    }
+
     const infoBoxes = `
-      <div class="info-box" onclick="copyToClipboard('${color.name}')">
-        ${color.name}
-      </div>
-      <div class="info-box" onclick="copyToClipboard('${color.hex}')">
-        ${color.hex}
-      </div>
-      <div class="info-box" onclick="copyToClipboard('${color.rgb}')">
-        ${color.rgb}
-      </div>
+      ${nameBox}
+      <div class="info-box" onclick="copyToClipboard('${color.hex}')">${color.hex}</div>
+      <div class="info-box" onclick="copyToClipboard('${color.rgb}')">${color.rgb}</div>
     `;
 
     item.innerHTML = `
@@ -234,5 +233,4 @@ function renderPalette(category) {
   });
 }
 
-// Initial render
 window.onload = () => renderPalette('pastel');
