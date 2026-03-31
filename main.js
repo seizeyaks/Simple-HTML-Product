@@ -15,17 +15,19 @@ const colorData = {
   ],
   muted: [
     /* Red/Pink based Muted */
-    { hex: "#8B7D7B", rgb: "rgb(139, 125, 123)" }, { hex: "#A6808C", rgb: "rgb(166, 128, 140)" }, { hex: "#9D8189", rgb: "rgb(157, 129, 137)" }, { hex: "#B5838D", rgb: "rgb(181, 131, 141)" }, { hex: "#6D5959", rgb: "rgb(109, 89, 89)" },
+    { hex: "#8B7D7B", rgb: "rgb(139, 125, 123)" }, { hex: "#A6808C", rgb: "rgb(166, 128, 140)" }, { hex: "#9D8189", rgb: "rgb(157, 129, 137)" }, { hex: "#B5838D", rgb: "rgb(181, 131, 141)" }, { hex: "#E5989B", rgb: "rgb(229, 152, 155)" }, { hex: "#6D5959", rgb: "rgb(109, 89, 89)" },
     /* Orange/Brown based Muted */
-    { hex: "#BC8A5F", rgb: "rgb(188, 138, 95)" }, { hex: "#A47148", rgb: "rgb(164, 113, 72)" }, { hex: "#8B5E34", rgb: "rgb(139, 94, 52)" }, { hex: "#6F4E37", rgb: "rgb(111, 78, 55)" }, { hex: "#C2B280", rgb: "rgb(194, 178, 128)" },
+    { hex: "#BC8A5F", rgb: "rgb(188, 138, 95)" }, { hex: "#A47148", rgb: "rgb(164, 113, 72)" }, { hex: "#8B5E34", rgb: "rgb(139, 94, 52)" }, { hex: "#6F4E37", rgb: "rgb(111, 78, 55)" }, { hex: "#C2B280", rgb: "rgb(194, 178, 128)" }, { hex: "#D4A373", rgb: "rgb(212, 163, 115)" },
     /* Yellow/Khaki based Muted */
-    { hex: "#BDB76B", rgb: "rgb(189, 183, 107)" }, { hex: "#9A9473", rgb: "rgb(154, 148, 115)" }, { hex: "#827839", rgb: "rgb(130, 120, 57)" }, { hex: "#A5A58D", rgb: "rgb(165, 165, 141)" }, { hex: "#6B705C", rgb: "rgb(107, 112, 92)" },
+    { hex: "#BDB76B", rgb: "rgb(189, 183, 107)" }, { hex: "#9A9473", rgb: "rgb(154, 148, 115)" }, { hex: "#827839", rgb: "rgb(130, 120, 57)" }, { hex: "#A5A58D", rgb: "rgb(165, 165, 141)" }, { hex: "#E9EDC9", rgb: "rgb(233, 237, 201)" }, { hex: "#6B705C", rgb: "rgb(107, 112, 92)" },
     /* Green based Muted */
-    { hex: "#8FBC8F", rgb: "rgb(143, 188, 143)" }, { hex: "#667761", rgb: "rgb(102, 119, 97)" }, { hex: "#545E56", rgb: "rgb(84, 94, 86)" }, { hex: "#3A5A40", rgb: "rgb(58, 90, 64)" }, { hex: "#2F3E46", rgb: "rgb(47, 62, 70)" },
+    { hex: "#8FBC8F", rgb: "rgb(143, 188, 143)" }, { hex: "#667761", rgb: "rgb(102, 119, 97)" }, { hex: "#545E56", rgb: "rgb(84, 94, 86)" }, { hex: "#3A5A40", rgb: "rgb(58, 90, 64)" }, { hex: "#CCD5AE", rgb: "rgb(204, 213, 174)" }, { hex: "#2F3E46", rgb: "rgb(47, 62, 70)" },
     /* Blue/Steel based Muted */
-    { hex: "#708090", rgb: "rgb(112, 128, 144)" }, { hex: "#5D6D7E", rgb: "rgb(93, 109, 126)" }, { hex: "#4A5759", rgb: "rgb(74, 87, 89)" }, { hex: "#3D5A80", rgb: "rgb(61, 90, 128)" }, { hex: "#283747", rgb: "rgb(40, 55, 71)" },
+    { hex: "#708090", rgb: "rgb(112, 128, 144)" }, { hex: "#5D6D7E", rgb: "rgb(93, 109, 126)" }, { hex: "#4A5759", rgb: "rgb(74, 87, 89)" }, { hex: "#3D5A80", rgb: "rgb(61, 90, 128)" }, { hex: "#98C1D9", rgb: "rgb(152, 193, 217)" }, { hex: "#283747", rgb: "rgb(40, 55, 71)" },
     /* Purple based Muted */
-    { hex: "#6D6875", rgb: "rgb(109, 104, 117)" }, { hex: "#5B507A", rgb: "rgb(91, 80, 122)" }, { hex: "#483D8B", rgb: "rgb(72, 61, 139)" }, { hex: "#322C3D", rgb: "rgb(50, 44, 61)" }, { hex: "#4A412A", rgb: "rgb(74, 65, 42)" }
+    { hex: "#6D6875", rgb: "rgb(109, 104, 117)" }, { hex: "#5B507A", rgb: "rgb(91, 80, 122)" }, { hex: "#483D8B", rgb: "rgb(72, 61, 139)" }, { hex: "#B79CED", rgb: "rgb(183, 156, 237)" }, { hex: "#322C3D", rgb: "rgb(50, 44, 61)" }, { hex: "#4A412A", rgb: "rgb(74, 65, 42)" },
+    /* Gray/Neutral Muted */
+    { hex: "#F8F9FA", rgb: "rgb(248, 249, 250)" }, { hex: "#E9ECEF", rgb: "rgb(233, 236, 239)" }, { hex: "#DEE2E6", rgb: "rgb(222, 226, 230)" }, { hex: "#ADB5BD", rgb: "rgb(173, 181, 189)" }, { hex: "#6C757D", rgb: "rgb(108, 117, 125)" }, { hex: "#343A40", rgb: "rgb(52, 58, 64)" }
   ],
   red: [
     { name: "IndianRed", hex: "#CD5C5C", rgb: "rgb(205, 92, 92)" },
