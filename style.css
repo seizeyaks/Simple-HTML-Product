@@ -304,6 +304,23 @@ h1 {
 }
 
 
+/* Share Section */
+.share-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.share-label {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.share-section .a2a_kit {
+  justify-content: center;
+}
+
+
 /* Footer */
 footer {
   margin-top: 80px;
